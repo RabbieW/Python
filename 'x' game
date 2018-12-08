@@ -1,0 +1,38 @@
+#'x' game
+import time as t
+x = int (input('Please input a number:\n'))
+a = int (input('Please input a number to start with:\n'))
+b = int (input('Please input a number to stop with:\n'))
+
+for i in range(a,b + 1,1):
+    y = input ('')
+    
+    if y == 'PASS!':#如果输入PASS：
+        if i % x == 0 or str(x) in str(i): #如果i能被x整除或i里面包含x：
+            print ('continue')
+        else:
+            print ('WRONG')
+            print ('It should be')
+            if i % x == 0 or str(x) in str(i):
+                print ('PASS!')
+            else:
+                print (i)
+    if y == str(i):
+        if i % x == 0 or str(x) in str(i):
+            print ('WRONG')
+            print ('It should be')
+            if i % x == 0 or str(x) in str(i):
+                print ('PASS!')
+            else:
+                print (i)
+        else:
+            print ('continue')
+    else:
+        print ('WRONG')
+        print ('It should be')
+        if i % x == 0 or str(x) in str(i):
+            print ('PASS!')
+        else:
+            print (i)
+print ('thanks for trying!')
+t.sleep(5)
